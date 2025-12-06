@@ -1,4 +1,4 @@
-package com.institucion.colegio.models;
+package com.institucion.colegio.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
