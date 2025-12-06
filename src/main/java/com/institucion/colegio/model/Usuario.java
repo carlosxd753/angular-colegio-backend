@@ -14,6 +14,7 @@ public class Usuario extends BaseModel{
     private String apellidos;
     private String dni;
     private String correo;
+    private String password;
 
     @ManyToOne
     @JoinColumn(name="id_rol")
