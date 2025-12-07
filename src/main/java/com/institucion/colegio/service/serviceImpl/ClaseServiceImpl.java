@@ -2,6 +2,7 @@ package com.institucion.colegio.service.serviceImpl;
 
 import com.institucion.colegio.dto.ClaseDTO;
 import com.institucion.colegio.dto.ClaseRequestDTO;
+import com.institucion.colegio.exception.EntidadNoEncontradaException;
 import com.institucion.colegio.model.Clase;
 import com.institucion.colegio.repository.ClaseRepository;
 import com.institucion.colegio.service.ClaseService;
