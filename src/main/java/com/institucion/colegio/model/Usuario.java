@@ -17,7 +17,7 @@ public class Usuario extends BaseModel{
     private String password;
 
     @ManyToOne
-    @JoinColumn(name="id_rol")
+    @JoinColumn(name="id_rol", nullable = false)
     private Rol rol;
 
     @ManyToOne
