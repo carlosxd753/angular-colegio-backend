@@ -1,6 +1,7 @@
 package com.institucion.colegio.service.serviceImpl;
 
 import com.institucion.colegio.dto.*;
+import com.institucion.colegio.exception.EntidadNoEncontradaException;
 import com.institucion.colegio.model.Clase;
 import com.institucion.colegio.model.Rol;
 import com.institucion.colegio.model.Usuario;

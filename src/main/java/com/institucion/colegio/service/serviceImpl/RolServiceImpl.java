@@ -2,6 +2,7 @@ package com.institucion.colegio.service.serviceImpl;
 
 import com.institucion.colegio.dto.RolDTO;
 import com.institucion.colegio.dto.RolRequestDTO;
+import com.institucion.colegio.exception.EntidadNoEncontradaException;
 import com.institucion.colegio.model.Rol;
 import com.institucion.colegio.repository.RolRepository;
 import com.institucion.colegio.service.RolService;
