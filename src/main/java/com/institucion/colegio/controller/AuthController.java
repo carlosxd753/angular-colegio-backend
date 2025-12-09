@@ -1,5 +1,6 @@
 package com.institucion.colegio.controller;
 
+import com.institucion.colegio.dto.ApiError;
 import com.institucion.colegio.dto.AuthResponse;
 import com.institucion.colegio.dto.LoginDTO;
 import com.institucion.colegio.service.CustomUserDetailsService;
@@ -20,8 +21,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/auth")
 @RequiredArgsConstructor
 public class AuthController {
-
-    private final UsuarioService usuarioService;
     private final AuthenticationManager authenticationManager;
     private final JwtService jwtService;
     private final CustomUserDetailsService customUserDetailsService;
