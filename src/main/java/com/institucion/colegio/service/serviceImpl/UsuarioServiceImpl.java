@@ -10,6 +10,7 @@ import com.institucion.colegio.repository.RolRepository;
 import com.institucion.colegio.repository.UsuarioRepository;
 import com.institucion.colegio.service.UsuarioService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -21,6 +22,7 @@ public class UsuarioServiceImpl implements UsuarioService {
     private final UsuarioRepository usuarioRepository;
     private final ClaseRepository claseRepository;
     private final RolRepository rolRepository;
+    private final PasswordEncoder passwordEncoder;
 
     @Override
     public List<UsuarioDTO> listarTodos() {
@@ -52,7 +54,7 @@ public class UsuarioServiceImpl implements UsuarioService {
         usuario.setApellidos(dto.apellidos());
         usuario.setDni(dto.dni());
         usuario.setCorreo(dto.correo());
-        usuario.setPassword(dto.password());
+        usuario.setPassword(passwordEncoder.encode(dto.password()));
         usuario.setRol(rol);
         usuario.setClase(clase);
 

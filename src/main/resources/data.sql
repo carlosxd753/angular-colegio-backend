@@ -18,19 +18,19 @@ INSERT INTO clase (periodo, fecha_creacion, fecha_actualizacion) VALUES
 ('2026-I', NOW(), NOW());
 
 INSERT INTO usuario (nombre, apellidos, dni, correo, password, id_rol, id_clase, fecha_creacion, fecha_actualizacion) VALUES
-('Enrique', 'Honrado', '12345678', 'enrique@administrador.com', '123456', 1, NULL, NOW(), NOW()),
-('Jose', 'Benites', '22345678', 'jose@estudiante.com', '123456', 3, 1, NOW(), NOW()),
-('Estudiante3', 'Apellido3', '32345678', 'estudiante3@estudiante.com', '123456', 3, 2, NOW(), NOW()),
-('Estudiante4', 'Apellido4', '42345678', 'estudiante4@estudiante.com', '123456', 3, 2, NOW(), NOW()),
-('Estudiante5', 'Apellido5', '52345678', 'estudiante5@estudiante.com', '123456', 3, 2, NOW(), NOW()),
-('Estudiante6', 'Apellido6', '62345678', 'estudiante6@estudiante.com', '123456', 3, 3, NOW(), NOW()),
-('Estudiante7', 'Apellido7', '72345678', 'estudiante7@estudiante.com', '123456', 3, 3, NOW(), NOW()),
-('Estudiante8', 'Apellido8', '82345678', 'estudiante8@estudiante.com', '123456', 3, 3, NOW(), NOW()),
-('Estudiante9', 'Apellido9', '92345678', 'estudiante9@estudiante.com', '123456', 3, 3, NOW(), NOW()),
-('Estudiante10', 'Apellido10', '02345678', 'estudiante10@estudiante.com', '123456', 3, 2, NOW(), NOW()),
-('Luis', 'Gomez', '87654321', 'luis@profesor.com', '123456', 2, 1, NOW(), NOW()),
-('Ana', 'Perez', '44556677', 'ana@profesor.com', '123456', 2, 2, NOW(), NOW()),
-('Roberto', 'Ramirez', '45434343', 'roberto@profesor.com', '123456', 2, 3, NOW(), NOW());
+('Enrique', 'Honrado', '12345678', 'enrique@administrador.com', '$2a$12$A3s84lhmInwuviK2WWhoWe6T0lPFTrpFY/hrqDqW6.94EUJGPjSJ2', 1, NULL, NOW(), NOW()),
+('Jose', 'Benites', '22345678', 'jose@estudiante.com', '$2a$12$A3s84lhmInwuviK2WWhoWe6T0lPFTrpFY/hrqDqW6.94EUJGPjSJ2', 3, 1, NOW(), NOW()),
+('Estudiante3', 'Apellido3', '32345678', 'estudiante3@estudiante.com', '$2a$12$A3s84lhmInwuviK2WWhoWe6T0lPFTrpFY/hrqDqW6.94EUJGPjSJ2', 3, 2, NOW(), NOW()),
+('Estudiante4', 'Apellido4', '42345678', 'estudiante4@estudiante.com', '$2a$12$A3s84lhmInwuviK2WWhoWe6T0lPFTrpFY/hrqDqW6.94EUJGPjSJ2', 3, 2, NOW(), NOW()),
+('Estudiante5', 'Apellido5', '52345678', 'estudiante5@estudiante.com', '$2a$12$A3s84lhmInwuviK2WWhoWe6T0lPFTrpFY/hrqDqW6.94EUJGPjSJ2', 3, 2, NOW(), NOW()),
+('Estudiante6', 'Apellido6', '62345678', 'estudiante6@estudiante.com', '$2a$12$A3s84lhmInwuviK2WWhoWe6T0lPFTrpFY/hrqDqW6.94EUJGPjSJ2', 3, 3, NOW(), NOW()),
+('Estudiante7', 'Apellido7', '72345678', 'estudiante7@estudiante.com', '$2a$12$A3s84lhmInwuviK2WWhoWe6T0lPFTrpFY/hrqDqW6.94EUJGPjSJ2', 3, 3, NOW(), NOW()),
+('Estudiante8', 'Apellido8', '82345678', 'estudiante8@estudiante.com', '$2a$12$A3s84lhmInwuviK2WWhoWe6T0lPFTrpFY/hrqDqW6.94EUJGPjSJ2', 3, 3, NOW(), NOW()),
+('Estudiante9', 'Apellido9', '92345678', 'estudiante9@estudiante.com', '$2a$12$A3s84lhmInwuviK2WWhoWe6T0lPFTrpFY/hrqDqW6.94EUJGPjSJ2', 3, 3, NOW(), NOW()),
+('Estudiante10', 'Apellido10', '02345678', 'estudiante10@estudiante.com', '$2a$12$A3s84lhmInwuviK2WWhoWe6T0lPFTrpFY/hrqDqW6.94EUJGPjSJ2', 3, 2, NOW(), NOW()),
+('Luis', 'Gomez', '87654321', 'luis@profesor.com', '$2a$12$A3s84lhmInwuviK2WWhoWe6T0lPFTrpFY/hrqDqW6.94EUJGPjSJ2', 2, 1, NOW(), NOW()),
+('Ana', 'Perez', '44556677', 'ana@profesor.com', '$2a$12$A3s84lhmInwuviK2WWhoWe6T0lPFTrpFY/hrqDqW6.94EUJGPjSJ2', 2, 2, NOW(), NOW()),
+('Roberto', 'Ramirez', '45434343', 'roberto@profesor.com', '$2a$12$A3s84lhmInwuviK2WWhoWe6T0lPFTrpFY/hrqDqW6.94EUJGPjSJ2', 2, 3, NOW(), NOW());
 
 INSERT INTO curso_usuario (id_curso, id_usuario, fecha_creacion, fecha_actualizacion) VALUES
 (1, 11, NOW(), NOW()),
