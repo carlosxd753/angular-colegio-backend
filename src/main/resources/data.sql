@@ -15,10 +15,11 @@ INSERT INTO curso (nombre, fecha_creacion, fecha_actualizacion) VALUES
 INSERT INTO clase (periodo, fecha_creacion, fecha_actualizacion) VALUES
 ('2025-I', NOW(), NOW()),
 ('2025-II', NOW(), NOW()),
-('2026-I', NOW(), NOW());
+('2026-I', NOW(), NOW()),
+('SIN ASIGNAR', NOW(), NOW());
 
 INSERT INTO usuario (nombre, apellidos, dni, correo, password, id_rol, id_clase, fecha_creacion, fecha_actualizacion) VALUES
-('Enrique', 'Honrado', '12345678', 'enrique@administrador.com', '$2a$12$A3s84lhmInwuviK2WWhoWe6T0lPFTrpFY/hrqDqW6.94EUJGPjSJ2', 1, NULL, NOW(), NOW()),
+('Enrique', 'Honrado', '12345678', 'enrique@administrador.com', '$2a$12$A3s84lhmInwuviK2WWhoWe6T0lPFTrpFY/hrqDqW6.94EUJGPjSJ2', 1, 4, NOW(), NOW()),
 ('Jose', 'Benites', '22345678', 'jose@estudiante.com', '$2a$12$A3s84lhmInwuviK2WWhoWe6T0lPFTrpFY/hrqDqW6.94EUJGPjSJ2', 3, 1, NOW(), NOW()),
 ('Estudiante3', 'Apellido3', '32345678', 'estudiante3@estudiante.com', '$2a$12$A3s84lhmInwuviK2WWhoWe6T0lPFTrpFY/hrqDqW6.94EUJGPjSJ2', 3, 2, NOW(), NOW()),
 ('Estudiante4', 'Apellido4', '42345678', 'estudiante4@estudiante.com', '$2a$12$A3s84lhmInwuviK2WWhoWe6T0lPFTrpFY/hrqDqW6.94EUJGPjSJ2', 3, 2, NOW(), NOW()),
