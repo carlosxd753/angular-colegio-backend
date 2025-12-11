@@ -7,6 +7,8 @@ import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -20,6 +22,12 @@ public class CursoController {
     @GetMapping
     public ResponseEntity<List<CursoDTO>> listarCursos(){
         return new ResponseEntity<>(cursoService.listarTodos(), HttpStatus.OK);
+    }
+
+    @GetMapping("/me")
+    public ResponseEntity<List<CursoDTO>> obtenerMisCursos(@AuthenticationPrincipal UserDetails user){
+        System.out.println(user.getUsername());
+        return null;
     }
 
     @GetMapping("/{id}")
