@@ -33,6 +33,14 @@ public class UsuarioServiceImpl implements UsuarioService {
     }
 
     @Override
+    public List<UsuarioDTO> listarPorRol(String rol) {
+        return usuarioRepository.findByRol_Nombre(rol)
+                .stream()
+                .map(this::toDTO)
+                .toList();
+    }
+
+    @Override
     public UsuarioDTO obtenerPorId(Long id) {
         Usuario usuario = usuarioRepository.findById(id)
                 .orElseThrow(() -> new EntidadNoEncontradaException("No existe el usuario con id: " + id));
