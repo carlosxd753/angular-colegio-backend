@@ -19,8 +19,12 @@ public class UsuarioController {
     private final UsuarioService usuarioService;
 
     @GetMapping
-    public ResponseEntity<List<UsuarioDTO>> listarUsuarios(){
-        return new ResponseEntity<>(usuarioService.listarTodos(), HttpStatus.OK);
+    public ResponseEntity<List<UsuarioDTO>> listarUsuarios(@RequestParam(required = false) String rol){
+        if (rol == null){
+            return ResponseEntity.ok(usuarioService.listarTodos());
+        }
+
+        return ResponseEntity.ok(usuarioService.listarPorRol(rol));
     }
 
     @GetMapping("/{id}")

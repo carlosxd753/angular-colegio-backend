@@ -8,6 +8,7 @@ import java.util.List;
 
 public interface UsuarioService {
     List<UsuarioDTO> listarTodos();
+    List<UsuarioDTO> listarPorRol(String rol);
     UsuarioDTO obtenerPorId(Long id);
     UsuarioDTO crear(UsuarioCreateDTO dto);
     UsuarioDTO editar(Long id, UsuarioUpdateDTO dto);
