@@ -26,8 +26,7 @@ public class CursoController {
 
     @GetMapping("/me")
     public ResponseEntity<List<CursoDTO>> obtenerMisCursos(@AuthenticationPrincipal UserDetails user){
-        System.out.println(user.getUsername());
-        return null;
+        return new ResponseEntity<>(cursoService.obtenerCursosDelUsuario(user.getUsername()), HttpStatus.OK);
     }
 
     @GetMapping("/{id}")
