@@ -35,6 +35,9 @@ public class CursoServiceImpl implements CursoService {
         Usuario usuario = usuarioRepository.findByCorreo(correo)
                 .orElseThrow(() -> new RuntimeException("Usuario no encontrado"));
 
+        System.out.println(usuario);
+        System.out.println("ingrese aqui");
+
         return cursoUsuarioRepository.findByUsuario_Id(usuario.getId())
                 .stream()
                 .map(cu -> toDTO(cu.getCurso()))
