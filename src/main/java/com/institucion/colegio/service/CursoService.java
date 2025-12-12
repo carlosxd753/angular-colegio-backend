@@ -7,6 +7,7 @@ import java.util.List;
 
 public interface CursoService {
     List<CursoDTO> listarTodos();
+    List<CursoDTO> obtenerCursosDelUsuario(String correo);
     CursoDTO obtenerPorId(Long id);
     CursoDTO crear(CursoRequestDTO dto);
     CursoDTO editar(Long id, CursoRequestDTO dto);
