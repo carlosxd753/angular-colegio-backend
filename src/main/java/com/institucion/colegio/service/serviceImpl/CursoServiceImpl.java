@@ -4,7 +4,10 @@ import com.institucion.colegio.dto.CursoDTO;
 import com.institucion.colegio.dto.CursoRequestDTO;
 import com.institucion.colegio.exception.EntidadNoEncontradaException;
 import com.institucion.colegio.model.Curso;
+import com.institucion.colegio.model.Usuario;
 import com.institucion.colegio.repository.CursoRepository;
+import com.institucion.colegio.repository.CursoUsuarioRepository;
+import com.institucion.colegio.repository.UsuarioRepository;
 import com.institucion.colegio.service.CursoService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -16,12 +19,25 @@ import java.util.List;
 @RequiredArgsConstructor
 public class CursoServiceImpl implements CursoService {
     private final CursoRepository cursoRepository;
+    private final UsuarioRepository usuarioRepository;
+    private final CursoUsuarioRepository cursoUsuarioRepository;
 
     @Override
     public List<CursoDTO> listarTodos() {
         return cursoRepository.findAll()
                 .stream()
                 .map(this::toDTO)
+                .toList();
+    }
+
+    @Override
+    public List<CursoDTO> obtenerCursosDelUsuario(String correo) {
+        Usuario usuario = usuarioRepository.findByCorreo(correo)
+                .orElseThrow(() -> new RuntimeException("Usuario no encontrado"));
+
+        return cursoUsuarioRepository.findByUsuario_Id(usuario.getId())
+                .stream()
+                .map(cu -> toDTO(cu.getCurso()))
                 .toList();
     }
 
